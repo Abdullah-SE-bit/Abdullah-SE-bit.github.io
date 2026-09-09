@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════
-   Portfolio — Main Script
+   Portfolio, Main Script
    ═══════════════════════════════════════════════════════════ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStarfield();
 });
 
-/* ── Render Projects from projects.js ──────────────────── */
+/* -- Render Projects from projects.js -- */
 function renderProjects() {
   const grid = document.getElementById('projects-grid');
   if (!grid || typeof PROJECTS === 'undefined') return;
@@ -84,7 +84,7 @@ function renderProjects() {
   }).join('');
 }
 
-/* ── Image Gallery (per card) ──────────────────────────── */
+/* -- Image Gallery (per card) -- */
 function initGalleries() {
   document.querySelectorAll('.gallery-dot').forEach(dot => {
     dot.addEventListener('click', () => {
@@ -102,7 +102,7 @@ function initGalleries() {
   });
 }
 
-/* ── 3D tilt interaction (CSS variable driven) ─────────── */
+/* -- 3D tilt interaction (CSS variable driven) -- */
 function initTilt() {
   const supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   if (!supportsHover) return;
@@ -145,7 +145,7 @@ function initTilt() {
   });
 }
 
-/* ── Hero parallax tilt ────────────────────────────────── */
+/* -- Hero parallax tilt -- */
 function initHeroParallax() {
   const hero = document.getElementById('hero');
   const heroInner = hero ? hero.querySelector('.hero-inner') : null;
@@ -186,7 +186,7 @@ function initHeroParallax() {
   hero.addEventListener('mouseleave', resetTilt);
 }
 
-/* ── Starfield background ──────────────────────────────── */
+/* -- White particle field background -- */
 function initStarfield() {
   const canvas = document.getElementById('starfield');
   if (!canvas) return;
@@ -196,10 +196,10 @@ function initStarfield() {
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const palette = [
-    [0, 212, 255],
-    [124, 58, 237],
-    [236, 72, 153],
     [255, 255, 255],
+    [255, 255, 255],
+    [255, 255, 255],
+    [220, 220, 220],
   ];
 
   let width = 0;
@@ -291,7 +291,7 @@ function initStarfield() {
   }, { passive: true });
 }
 
-/* ── Navigation ────────────────────────────────────────── */
+/* -- Navigation -- */
 function initNav() {
   const navbar = document.getElementById('navbar');
   const toggle = document.querySelector('.nav-toggle');
@@ -335,7 +335,7 @@ function updateActiveNav() {
   });
 }
 
-/* ── Scroll Reveal ─────────────────────────────────────── */
+/* -- Scroll Reveal -- */
 function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {

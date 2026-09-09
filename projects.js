@@ -4,38 +4,38 @@
 // ║  Add / remove / edit your projects here.                         ║
 // ║  The website reads this array and renders cards automatically.   ║
 // ║  Just copy the TEMPLATE object, paste it into the array,         ║
-// ║  and fill in your details — that's it!                           ║
+// ║  and fill in your details, that's it!                            ║
 // ╠════════════════════════════════════════════════════════════════════╣
 // ║  ICON REFERENCE  (use these in techStack ▸ icon)                 ║
 // ║                                                                  ║
 // ║  Languages:                                                      ║
-// ║    "devicon-java-plain"          — Java                          ║
-// ║    "devicon-cplusplus-plain"     — C++                           ║
-// ║    "devicon-c-plain"             — C                             ║
-// ║    "devicon-csharp-plain"        — C#                            ║
-// ║    "devicon-python-plain"        — Python                        ║
-// ║    "devicon-javascript-plain"    — JavaScript                    ║
-// ║    "devicon-typescript-plain"    — TypeScript                    ║
+// ║    "devicon-java-plain"          : Java                          ║
+// ║    "devicon-cplusplus-plain"     : C++                           ║
+// ║    "devicon-c-plain"             : C                             ║
+// ║    "devicon-csharp-plain"        : C#                            ║
+// ║    "devicon-python-plain"        : Python                        ║
+// ║    "devicon-javascript-plain"    : JavaScript                    ║
+// ║    "devicon-typescript-plain"    : TypeScript                    ║
 // ║                                                                  ║
 // ║  Frameworks / Libraries:                                         ║
-// ║    "devicon-spring-original"     — Spring Boot                   ║
-// ║    "devicon-react-original"      — React                         ║
-// ║    "devicon-dot-net-plain"       — .NET                          ║
-// ║    "devicon-flask-original"      — Flask                         ║
-// ║    "devicon-nextjs-original"     — Next.js                       ║
-// ║    "devicon-nodejs-plain"        — Node.js                       ║
+// ║    "devicon-spring-original"     : Spring Boot                   ║
+// ║    "devicon-react-original"      : React                         ║
+// ║    "devicon-dot-net-plain"       : .NET                          ║
+// ║    "devicon-flask-original"      : Flask                         ║
+// ║    "devicon-nextjs-original"     : Next.js                       ║
+// ║    "devicon-nodejs-plain"        : Node.js                       ║
 // ║                                                                  ║
 // ║  Databases:                                                      ║
-// ║    "devicon-microsoftsqlserver-plain" — MS SQL Server            ║
-// ║    "devicon-postgresql-plain"    — PostgreSQL                    ║
-// ║    "devicon-mongodb-plain"       — MongoDB                       ║
-// ║    "devicon-mysql-plain"         — MySQL                         ║
+// ║    "devicon-microsoftsqlserver-plain" : MS SQL Server            ║
+// ║    "devicon-postgresql-plain"    : PostgreSQL                    ║
+// ║    "devicon-mongodb-plain"       : MongoDB                       ║
+// ║    "devicon-mysql-plain"         : MySQL                         ║
 // ║                                                                  ║
 // ║  Tools:                                                          ║
-// ║    "devicon-git-plain"           — Git                           ║
-// ║    "devicon-github-original"     — GitHub                        ║
-// ║    "devicon-docker-plain"        — Docker                        ║
-// ║    "devicon-linux-plain"         — Linux                         ║
+// ║    "devicon-git-plain"           : Git                           ║
+// ║    "devicon-github-original"     : GitHub                        ║
+// ║    "devicon-docker-plain"        : Docker                        ║
+// ║    "devicon-linux-plain"         : Linux                         ║
 // ║                                                                  ║
 // ║  Set icon to null for items without a devicon (a text            ║
 // ║  badge will be shown instead).                                   ║
@@ -67,7 +67,7 @@ const PROJECTS = [
   // ── 1 ─────────────────────────────────────────────────────────
   {
     title:       "Ocean Route Navigation",
-    subtitle:    "Maritime Navigation System — C++ & SFML",
+    subtitle:    "Maritime Navigation System, C++ & SFML",
     bullets: [
       "Developed a maritime route navigation system in C++ with SFML, rendering a real-world world map with actual global ports and real maritime routes loaded from a file-based database",
       "Modeled the port network as a weighted graph and implemented BFS, Dijkstra, and A* algorithms for optimal pathfinding using real-world cost and distance data",
@@ -94,8 +94,8 @@ const PROJECTS = [
 
   // ── 2 ─────────────────────────────────────────────────────────
   {
-    title:       "BOGO — Smart Transit Platform",
-    subtitle:    "Public Bus Transport System — Java & JavaFX",
+    title:       "BOGO, Smart Transit Platform",
+    subtitle:    "Public Bus Transport System, Java & JavaFX",
     bullets: [
       "Built a desktop public bus transport navigation app addressing the absence of any digital transit guide, eliminating commuter dependence on word-of-mouth and in-bus maps for route discovery",
       "Implemented strict 5-layer architecture (UI -> Controller -> Service -> Domain -> Repository) following GRASP and GoF design patterns with JDBC and MS SQL for persistence",
@@ -153,7 +153,7 @@ const PROJECTS = [
   // ── 4 ─────────────────────────────────────────────────────────
   {
     title:       "FLAKE",
-    subtitle:    "Student Portal — Python Flask & SQLite",
+    subtitle:    "Student Portal, Python Flask & SQLite",
     bullets: [
       "Built a unified university portal consolidating attendance tracking, grade viewing, course registration, timetable management, and Google Classroom-style academic workflows into a single authenticated platform",
       "Implemented role-based access for Students, Teachers, and Admins with session-based authentication, covering distinct feature sets per role including marking attendance, uploading materials, editing timetables, and managing faculty records",

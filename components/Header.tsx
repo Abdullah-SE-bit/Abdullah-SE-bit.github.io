@@ -25,6 +25,12 @@ export function Header() {
               Stack
             </a>
             <a
+              href="#experience"
+              className="hidden font-mono text-xs uppercase tracking-[0.14em] text-muted hover:text-foreground sm:block"
+            >
+              Experience
+            </a>
+            <a
               href="#contact"
               className="font-mono text-xs uppercase tracking-[0.14em] text-muted hover:text-foreground"
             >

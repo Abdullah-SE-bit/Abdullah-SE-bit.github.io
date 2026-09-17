@@ -88,17 +88,43 @@ export const projects: Project[] = [
   },
 ];
 
-export interface ExperienceEntry {
-  period: string;
+export interface TimelineEntry {
+  year: string;
   title: string;
-  organisation: string;
-  detail: string;
+  courses: string[];
 }
 
-/* Intentionally empty. No experience, leadership, or startup data exists in the
-   source portfolio, and nothing here may be invented. Populate this array and
-   render <Experience /> in app/page.tsx to switch the section on. */
-export const experience: ExperienceEntry[] = [];
+export const education = {
+  degree: "BS Software Engineering",
+  institution: "FAST-NUCES",
+  status: "Expected 2028",
+  timeline: [
+    {
+      year: "2026",
+      title: "Advanced Systems",
+      courses: ["Artificial Intelligence", "Software Quality Assurance (QA)"],
+    },
+    {
+      year: "2025",
+      title: "Data & Architecture",
+      courses: [
+        "Data Structures & Algorithms (DSA)",
+        "Database Systems",
+        "Software Design",
+        "Requirement Engineering",
+      ],
+    },
+    {
+      year: "2024",
+      title: "Fundamentals",
+      courses: [
+        "Object-Oriented Programming (OOP)",
+        "Programming Fundamentals",
+        "Software Engineering Principles",
+      ],
+    },
+  ] satisfies TimelineEntry[],
+};
 
 export const stack: { label: string; items: IconName[] }[] = [
   {

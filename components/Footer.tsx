@@ -34,7 +34,7 @@ export function Footer() {
       <Container>
         <div className="grid grid-cols-12 gap-x-6 gap-y-10 py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
-            <SectionLabel index="03" title="Contact" />
+            <SectionLabel index="04" title="Contact" />
           </div>
           <div className="col-span-12 md:col-span-10">
             <ul className="grid grid-cols-1 border-t border-line sm:grid-cols-3">

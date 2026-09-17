@@ -39,7 +39,7 @@ export const profile = {
 // key is designed to be public in client code; it can only send to that inbox.
 export const contactForm = {
   endpoint: "https://api.web3forms.com/submit",
-  accessKey: "",
+  accessKey: "ef34ce1f-79ff-4196-9938-e117b75866d3",
 };
 
 export const projects: Project[] = [

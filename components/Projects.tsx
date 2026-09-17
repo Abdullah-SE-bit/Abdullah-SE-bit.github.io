@@ -1,5 +1,5 @@
 import { Container, SectionLabel } from "./Container";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectTabs } from "./ProjectTabs";
 import { projects } from "@/lib/data";
 
 export function Projects() {
@@ -11,19 +11,7 @@ export function Projects() {
             <SectionLabel index="01" title="Projects" />
           </div>
           <div className="col-span-12 md:col-span-10">
-            {projects.map((project, i) => (
-              <ProjectCard
-                key={project.id}
-                index={String(i + 1).padStart(2, "0")}
-                title={project.title}
-                context={project.context}
-                problemStatement={project.problemStatement}
-                solution={project.solution}
-                techStack={project.techStack}
-                demoMedia={project.demoMedia}
-                githubLink={project.githubLink}
-              />
-            ))}
+            <ProjectTabs projects={projects} />
           </div>
         </div>
       </Container>

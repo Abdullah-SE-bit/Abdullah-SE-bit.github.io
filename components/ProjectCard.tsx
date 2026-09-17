@@ -1,7 +1,6 @@
 import type { DemoMedia } from "@/lib/data";
 
 export interface ProjectCardProps {
-  index: string;
   title: string;
   context: string;
   problemStatement: string;
@@ -12,7 +11,6 @@ export interface ProjectCardProps {
 }
 
 export function ProjectCard({
-  index,
   title,
   context,
   problemStatement,
@@ -22,19 +20,16 @@ export function ProjectCard({
   githubLink,
 }: ProjectCardProps) {
   return (
-    <article className="grid grid-cols-12 gap-x-6 gap-y-8 border-t border-line py-14 first:border-t-0 first:pt-0">
-      <div className="col-span-12 md:col-span-4">
-        <span className="font-mono text-xs text-faint tabular-nums">
-          {index}
-        </span>
-        <h3 className="mt-3 text-2xl font-medium tracking-[-0.01em] text-foreground">
-          {title}
-        </h3>
-        <p className="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-muted">
-          {context}
-        </p>
+    <article>
+      <h3 className="text-2xl font-medium tracking-[-0.01em] text-foreground md:text-3xl">
+        {title}
+      </h3>
+      <p className="mt-1 font-mono text-xs uppercase tracking-[0.14em] text-muted">
+        {context}
+      </p>
 
-        <ul className="mt-6 flex flex-wrap gap-x-3 gap-y-2">
+      <div className="mt-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
+        <ul className="flex flex-wrap gap-x-3 gap-y-2">
           {techStack.map((tech) => (
             <li
               key={tech}
@@ -50,14 +45,14 @@ export function ProjectCard({
             href={githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block border-b border-line pb-0.5 font-mono text-xs uppercase tracking-[0.14em] text-accent hover:border-accent"
+            className="border-b border-line pb-0.5 font-mono text-xs uppercase tracking-[0.14em] text-accent hover:border-accent"
           >
             Source
           </a>
         ) : null}
       </div>
 
-      <div className="col-span-12 md:col-span-8">
+      <div className="mt-8">
         <DemoMediaSlot media={demoMedia} title={title} />
 
         <dl className="mt-8 space-y-6">

@@ -82,6 +82,7 @@ export function ProjectTabs({ projects }: { projects: Project[] }) {
             techStack={project.techStack}
             demoMedia={project.demoMedia}
             githubLink={project.githubLink}
+            liveLink={project.liveLink}
           />
         </div>
       ))}

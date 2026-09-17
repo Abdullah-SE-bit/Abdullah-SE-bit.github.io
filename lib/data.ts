@@ -15,6 +15,7 @@ export interface Project {
   techStack: string[];
   demoMedia: DemoMedia | null;
   githubLink: string | null;
+  liveLink: string | null;
 }
 
 export const profile = {
@@ -33,40 +34,43 @@ export const profile = {
 
 export const projects: Project[] = [
   {
-    id: "ocean-route-navigation",
-    title: "Ocean Route Navigation",
-    context: "Maritime navigation system",
+    id: "cat-connect",
+    title: "Cat Connect",
+    context: "Cat welfare management platform",
     problemStatement:
-      "Optimal routing across a global port network requires evaluating real maritime routes against real-world cost and distance data.",
+      "Running a cat shelter spans the registry, intake and discharge, medical records, vet appointments, adoption, fostering, lost and found, donations, and messaging, across Super Admin, Shelter Admin, Vet, and Volunteer roles.",
     solution:
-      "Modelled the port network as a weighted graph and implemented BFS, Dijkstra, and A* for pathfinding. Queues simulate port docking sequences; linked lists represent multi-port voyage paths. A real-time SFML simulation renders vessels traversing computed routes across a world map built from a file-based database of actual global ports.",
-    techStack: ["C++", "SFML", "DSA"],
+      "Django REST Framework API organised into 18 Django apps on PostgreSQL, with a React 19 and Vite single-page front end. JWT authentication through SimpleJWT with token blacklisting, and email verification gating login for every role except Super Admin. Celery workers and Celery Beat on Redis run scheduled jobs: vaccination and appointment reminders, closing expired donation campaigns, and a lost-and-found matching engine. The API is documented in OpenAPI through drf-spectacular, and maps are built with Leaflet.",
+    techStack: ["Django", "Django REST Framework", "React", "PostgreSQL", "Celery", "Redis"],
     demoMedia: null,
-    githubLink: "https://github.com/Abdullah-SE-bit",
+    githubLink: "https://github.com/Abdullah-SE-bit/Cat_Connect",
+    liveLink: null,
   },
   {
-    id: "bogo",
-    title: "BOGO",
-    context: "Public bus transport platform",
+    id: "sabaq-ai",
+    title: "Sabaq AI",
+    context: "Team project, Bano Qabil AI Hackathon 2026",
     problemStatement:
-      "No digital transit guide existed for the bus network. Commuters depended on word-of-mouth and in-bus maps for route discovery.",
+      "Board exams are marked against one specific textbook, but general AI chatbots answer from a global corpus: often right in general, wrong for the exam, and occasionally invented. Students cannot tell an exam-correct answer from a plausible one, and get no signal about where they are weak.",
     solution:
-      "Desktop navigation app on a strict five-layer architecture (UI, Controller, Service, Domain, Repository) following GRASP and GoF patterns, with JDBC and MS SQL for persistence. DSA-driven map construction and pathfinding modules serve real-time route and stop lookup. Role-based access separates Admins, who add, remove, and deactivate stops and manage drivers and routes, from Drivers, who view daily assigned routes and log operational issues. All activity is logged through the portal.",
-    techStack: ["Java", "JavaFX", "MS SQL Server", "JDBC"],
+      "Syllabus-grounded study companion for FBISE classes 9 to 12. Questions are embedded with Jina AI and matched by pgvector search in Supabase, filtered by board, class, and subject. A confidence guardrail refuses low-similarity questions without calling the LLM at all; otherwise Gemini answers only from the retrieved chunks, with citations validated server-side and shown as the chapter and page. Quizzes are graded server-side, per-chapter mastery is computed from quiz attempts, and a deterministic revision plan is rebuilt around the exam date on every load. Works in English, Urdu, and Roman Urdu, with Urdu voice input through Whisper on Groq. A weekly GitHub Actions crawler parses or OCRs FBISE papers and textbooks into the corpus.",
+    techStack: ["Next.js", "TypeScript", "Supabase", "pgvector", "Gemini", "Jina AI"],
     demoMedia: null,
-    githubLink: "https://github.com/Abdullah-SE-bit",
+    githubLink: "https://github.com/TahaSohail-Goat/SabaqAI",
+    liveLink: "https://sabaq-ai-three.vercel.app",
   },
   {
-    id: "sdr-mis",
-    title: "SDR_MIS",
-    context: "Disaster management information system",
+    id: "shelter-os",
+    title: "Shelter OS",
+    context: "Role-aware shelter management console",
     problemStatement:
-      "Disaster response spans emergency reporting, resource logistics, rescue team deployment, hospital coordination, and financial tracking, across five distinct operational roles.",
+      "Shelter management serves different jobs by role: a SaaS operator onboarding shelters, a shelter admin running intake and adoptions, an employee working assigned cases, an adopter browsing pets. Most admin templates give every role the same sidebar and hide the rest behind permission checks.",
     solution:
-      "Full-stack MIS pairing a Spring Boot 3.2 REST API with a React 18 SPA. JWT stateless authentication enforces role-based access control across five roles via Spring Security and @PreAuthorize method-level authorization. A 13-table MS SQL schema uses database-level triggers for inventory and team-status automation, views for role-scoped data abstraction, and composite indexes for query performance. Approval-based workflows for resource allocation, team dispatch, and financial transactions enforce ACID properties with rollback support across 10+ REST controller modules documented via Swagger UI.",
-    techStack: ["Spring Boot", "React", "MS SQL Server", "Spring Security", "JWT"],
+      "Navigation, dashboards, and available actions are built per role for Super Admin, Shelter Admin, Employee, and Customer, from a single navigation config. Covers the animal registry, intake, discharge, medical history, rescue and lost-and-found reports, adoption and foster, donations and finance, inventory, analytics, an audit log, threaded messaging, notifications, and an interactive shelter map. Front end only: every page runs on mock datasets with mock role-based sign-in, and there is no backend, database, or real authentication.",
+    techStack: ["Next.js", "React", "Tailwind CSS", "Radix UI", "TanStack Table", "Leaflet"],
     demoMedia: null,
-    githubLink: "https://github.com/Abdullah-SE-bit",
+    githubLink: "https://github.com/Abdullah-SE-bit/shelter-os",
+    liveLink: "https://shelter-os-seven.vercel.app",
   },
   {
     id: "flake",
@@ -79,6 +83,7 @@ export const projects: Project[] = [
     techStack: ["Python", "Flask", "SQLite", "JavaScript", "HTML/CSS"],
     demoMedia: null,
     githubLink: "https://github.com/Abdullah-SE-bit",
+    liveLink: null,
   },
 ];
 

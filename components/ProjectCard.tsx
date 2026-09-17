@@ -8,7 +8,11 @@ export interface ProjectCardProps {
   techStack: string[];
   demoMedia: DemoMedia | null;
   githubLink: string | null;
+  liveLink: string | null;
 }
+
+const linkClass =
+  "border-b border-line pb-0.5 font-mono text-xs uppercase tracking-[0.14em] text-accent hover:border-accent";
 
 export function ProjectCard({
   title,
@@ -18,6 +22,7 @@ export function ProjectCard({
   techStack,
   demoMedia,
   githubLink,
+  liveLink,
 }: ProjectCardProps) {
   return (
     <article>
@@ -40,15 +45,29 @@ export function ProjectCard({
           ))}
         </ul>
 
-        {githubLink ? (
-          <a
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-b border-line pb-0.5 font-mono text-xs uppercase tracking-[0.14em] text-accent hover:border-accent"
-          >
-            Source
-          </a>
+        {liveLink || githubLink ? (
+          <div className="flex items-center gap-6">
+            {liveLink ? (
+              <a
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                Live demo
+              </a>
+            ) : null}
+            {githubLink ? (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={linkClass}
+              >
+                Source
+              </a>
+            ) : null}
+          </div>
         ) : null}
       </div>
 

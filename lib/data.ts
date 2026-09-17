@@ -18,10 +18,9 @@ export interface Project {
 export const profile = {
   name: "Muhammad Abdullah Adnan",
   shortName: "Abdullah Adnan",
-  mark: "AA",
-  role: "Software Engineering Undergraduate",
-  intro:
-    "BSSE undergraduate building scalable full-stack systems, from C++ graph engines to role-based Spring Boot platforms.",
+  role: "Software Engineering undergraduate",
+  tagline: "Building full stack applications with AI integration",
+  photo: { src: "/profile.png", width: 1122, height: 1402 },
   availability: "Open to opportunities",
   email: "chabdullah3506@gmail.com",
   github: "https://github.com/Abdullah-SE-bit",

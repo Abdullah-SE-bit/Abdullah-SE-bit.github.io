@@ -4,14 +4,16 @@ import { GeistMono } from "geist/font/mono";
 import { profile } from "@/lib/data";
 import "./globals.css";
 
+const description = `${profile.role}. ${profile.tagline}.`;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://abdullahadnan.me"),
   title: `${profile.name}, Software Engineer`,
-  description: profile.intro,
+  description,
   authors: [{ name: profile.name, url: profile.github }],
   openGraph: {
     title: `${profile.name}, Software Engineer`,
-    description: profile.intro,
+    description,
     url: "https://abdullahadnan.me",
     siteName: profile.name,
     type: "profile",

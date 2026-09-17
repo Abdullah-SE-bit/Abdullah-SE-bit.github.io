@@ -36,7 +36,7 @@ export const projects: Project[] = [
     title: "Ocean Route Navigation",
     context: "Maritime navigation system",
     problemStatement:
-      "Optimal routing across a global port network requires evaluating real maritime routes against real-world cost and distance data, where the cheapest path and the shortest path are rarely the same.",
+      "Optimal routing across a global port network requires evaluating real maritime routes against real-world cost and distance data.",
     solution:
       "Modelled the port network as a weighted graph and implemented BFS, Dijkstra, and A* for pathfinding. Queues simulate port docking sequences; linked lists represent multi-port voyage paths. A real-time SFML simulation renders vessels traversing computed routes across a world map built from a file-based database of actual global ports.",
     techStack: ["C++", "SFML", "DSA"],

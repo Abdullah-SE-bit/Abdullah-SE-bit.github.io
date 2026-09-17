@@ -1,3 +1,5 @@
+import type { IconName } from "./icons";
+
 export interface DemoMedia {
   src: string;
   alt: string;
@@ -92,26 +94,31 @@ export interface ExperienceEntry {
    render <Experience /> in app/page.tsx to switch the section on. */
 export const experience: ExperienceEntry[] = [];
 
-export const stack = [
-  { label: "Languages", items: ["Java", "C++", "C", "C#", "Python", "JavaScript"] },
+export const stack: { label: string; items: IconName[] }[] = [
+  {
+    label: "Languages",
+    items: ["Python", "JavaScript", "HTML5", "CSS3", "Java", "C++", "C", "C#"],
+  },
   {
     label: "Frameworks",
-    items: ["Spring Boot", "React", ".NET", "Flask", "JavaFX", "SFML"],
-  },
-  { label: "Data & Tools", items: ["MS SQL Server", "SQLite", "Git", "GitHub"] },
-  {
-    label: "Architecture",
     items: [
-      "Layered",
-      "MVC",
-      "MVVM",
-      "Client-Server",
-      "Repository",
-      "GRASP",
-      "GoF",
-      "User Stories & Use Cases",
-      "Sequence Diagrams",
-      "System Sequence Diagrams",
+      "React",
+      "Node.js",
+      "Express",
+      "Next.js",
+      "Spring Boot",
+      ".NET",
+      "Flask",
+      "JavaFX",
+      "SFML",
     ],
   },
-] as const;
+  {
+    label: "Databases",
+    items: ["MySQL", "SQL Server", "PostgreSQL", "Supabase", "SQLite"],
+  },
+  {
+    label: "Tools",
+    items: ["Git", "GitHub", "Docker", "Kubernetes"],
+  },
+];

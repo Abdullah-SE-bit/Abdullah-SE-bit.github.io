@@ -1,6 +1,6 @@
 import { Container, SectionLabel } from "./Container";
 import { ContactForm } from "./ContactForm";
-import { profile } from "@/lib/data";
+import { contactForm, profile } from "@/lib/data";
 
 const links = [
   {
@@ -46,9 +46,14 @@ export function Footer() {
             <SectionLabel index="04" title="Contact" />
           </div>
           <div className="col-span-12 md:col-span-10">
-            <ContactForm />
+            {/* Without a Web3Forms key every send fails, so the form stays hidden. */}
+            {contactForm.accessKey ? (
+              <div className="mb-16">
+                <ContactForm />
+              </div>
+            ) : null}
 
-            <ul className="mt-16 grid grid-cols-1 border-t border-line sm:grid-cols-2 lg:grid-cols-4">
+            <ul className="grid grid-cols-1 border-t border-line sm:grid-cols-2 lg:grid-cols-4">
               {links.map((link) => (
                 <li key={link.label} className="border-b border-line lg:border-b-0">
                   <a

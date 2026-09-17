@@ -8,11 +8,11 @@ const description = `${profile.role}. ${profile.tagline}.`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abdullahadnan.me"),
-  title: `${profile.name}, Software Engineer`,
+  title: profile.name,
   description,
   authors: [{ name: profile.name, url: profile.github }],
   openGraph: {
-    title: `${profile.name}, Software Engineer`,
+    title: profile.name,
     description,
     url: "https://abdullahadnan.me",
     siteName: profile.name,

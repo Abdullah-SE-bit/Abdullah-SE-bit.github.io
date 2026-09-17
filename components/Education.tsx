@@ -2,15 +2,15 @@ import { Container, SectionLabel } from "./Container";
 import { education } from "@/lib/data";
 
 // Year label is 20px tall; its dot and the connecting line centre on 10px.
-export function Experience() {
+export function Education() {
   const { timeline } = education;
 
   return (
-    <section id="experience" className="border-b border-line">
+    <section id="education" className="border-b border-line">
       <Container>
         <div className="grid grid-cols-12 gap-x-6 gap-y-10 py-20 md:py-28">
           <div className="col-span-12 md:col-span-2">
-            <SectionLabel index="03" title="Experience" />
+            <SectionLabel index="03" title="Education" />
           </div>
           <div className="col-span-12 md:col-span-10">
             <h3 className="text-2xl font-medium tracking-[-0.01em] text-foreground md:text-3xl">

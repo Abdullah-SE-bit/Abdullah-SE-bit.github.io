@@ -101,7 +101,7 @@ export const stack: { label: string; items: IconName[] }[] = [
   },
   {
     label: "Frameworks",
-    items: ["React", "Node.js", "Express", "Next.js", "Django", "Flask", "SFML"],
+    items: ["React", "Node.js", "Express", "Next.js", "Django", "Flask"],
   },
   {
     label: "Databases",

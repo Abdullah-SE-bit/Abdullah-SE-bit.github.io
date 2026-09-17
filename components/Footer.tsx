@@ -41,7 +41,7 @@ export function Footer() {
   return (
     <footer id="contact">
       <Container>
-        <div className="grid grid-cols-12 gap-x-6 gap-y-10 py-20 md:py-28">
+        <div className="grid grid-cols-12 gap-x-6 gap-y-10 pt-20 pb-6 md:pt-28">
           <div className="col-span-12 md:col-span-2">
             <SectionLabel index="04" title="Contact" />
           </div>

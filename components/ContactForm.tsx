@@ -24,6 +24,7 @@ export function ContactForm() {
     const data = new FormData(form);
     const name = String(data.get("name"));
     const email = String(data.get("email"));
+    const subject = String(data.get("subject"));
 
     // Honeypot: only bots fill the hidden checkbox, so skip the request.
     if (data.get("botcheck")) {
@@ -42,7 +43,7 @@ export function ContactForm() {
         },
         body: JSON.stringify({
           access_key: contactForm.accessKey,
-          subject: `Project discussion from ${name}`,
+          subject: `Portfolio: ${subject}`,
           name,
           email,
           message: String(data.get("message")),
@@ -93,6 +94,20 @@ export function ContactForm() {
             required
             maxLength={254}
             autoComplete="email"
+            className={inputClass}
+          />
+        </div>
+
+        <div className="sm:col-span-2">
+          <label htmlFor={`${id}-subject`} className={labelClass}>
+            Subject
+          </label>
+          <input
+            id={`${id}-subject`}
+            name="subject"
+            type="text"
+            required
+            maxLength={150}
             className={inputClass}
           />
         </div>

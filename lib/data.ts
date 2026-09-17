@@ -31,7 +31,16 @@ export const profile = {
   githubHandle: "Abdullah-SE-bit",
   linkedin: "https://www.linkedin.com/in/abdullah-adnan-660bb1350/",
   linkedinHandle: "abdullah-adnan",
+  whatsapp: "https://wa.me/923335178603",
+  whatsappDisplay: "+92 333 517 8603",
 } as const;
+
+// Web3Forms relays form submissions to the email the key was created with. The
+// key is designed to be public in client code; it can only send to that inbox.
+export const contactForm = {
+  endpoint: "https://api.web3forms.com/submit",
+  accessKey: "",
+};
 
 export const projects: Project[] = [
   {

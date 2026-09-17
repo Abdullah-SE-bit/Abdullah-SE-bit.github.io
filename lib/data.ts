@@ -24,6 +24,7 @@ export const profile = {
   role: "Software Engineering undergraduate",
   tagline: "Building full stack applications with AI integration",
   photo: { src: "/profile.png", width: 1122, height: 1402 },
+  cv: { src: "/CV.pdf", fileName: "Muhammad-Abdullah-Adnan-CV.pdf" },
   availability: "Open to opportunities",
   email: "chabdullah3506@gmail.com",
   github: "https://github.com/Abdullah-SE-bit",

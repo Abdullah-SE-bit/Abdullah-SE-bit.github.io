@@ -15,12 +15,31 @@ export function Hero() {
               <span className="block text-muted">{profile.tagline}</span>
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <a
-                href="#projects"
-                className="border border-foreground px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-foreground hover:bg-foreground hover:text-background"
-              >
-                View Projects
-              </a>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href="#projects"
+                  className="border border-foreground px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-foreground hover:bg-foreground hover:text-background"
+                >
+                  View Projects
+                </a>
+                <a
+                  href={profile.cv.src}
+                  download={profile.cv.fileName}
+                  className="flex items-center gap-2 border border-line px-5 py-2.5 font-mono text-xs uppercase tracking-[0.14em] text-foreground hover:border-foreground"
+                >
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    aria-hidden="true"
+                    className="h-3.5 w-3.5"
+                  >
+                    <path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M3 13.5h10" />
+                  </svg>
+                  Download CV
+                </a>
+              </div>
               <span className="font-mono text-xs uppercase tracking-[0.14em] text-muted">
                 {profile.availability}
               </span>

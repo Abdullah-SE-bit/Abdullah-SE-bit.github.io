@@ -1,5 +1,5 @@
 import { Container, SectionLabel } from "./Container";
-import { icons } from "@/lib/icons";
+import { icons, type IconData } from "@/lib/icons";
 import { stack } from "@/lib/data";
 
 export function Stack() {
@@ -21,19 +21,22 @@ export function Stack() {
                     {group.label}
                   </h3>
                   <ul className="col-span-12 flex flex-wrap gap-x-8 gap-y-5 md:col-span-9">
-                    {group.items.map((name) => (
-                      <li key={name} className="flex items-center gap-2.5">
-                        <svg
-                          viewBox={icons[name].viewBox}
-                          fill="currentColor"
-                          aria-hidden="true"
-                          className="h-5 w-5 shrink-0 text-foreground"
-                        >
-                          <path d={icons[name].path} />
-                        </svg>
-                        <span className="text-muted">{name}</span>
-                      </li>
-                    ))}
+                    {group.items.map((name) => {
+                      const icon: IconData = icons[name];
+                      return (
+                        <li key={name} className="flex items-center gap-2.5">
+                          <svg
+                            viewBox={icon.viewBox}
+                            fill="currentColor"
+                            aria-hidden="true"
+                            className="h-5 w-5 shrink-0 text-foreground"
+                          >
+                            <path d={icon.path} fillRule={icon.fillRule} />
+                          </svg>
+                          <span className="text-muted">{name}</span>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
               ))}

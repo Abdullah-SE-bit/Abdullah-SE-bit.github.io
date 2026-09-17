@@ -141,6 +141,14 @@ export const stack: { label: string; items: IconName[] }[] = [
   },
   {
     label: "Tools",
-    items: ["Git", "GitHub", "Docker", "Kubernetes"],
+    items: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Kubernetes",
+      "SonarQube",
+      "Claude Code",
+      "OpenAI Codex",
+    ],
   },
 ];

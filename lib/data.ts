@@ -97,21 +97,11 @@ export const experience: ExperienceEntry[] = [];
 export const stack: { label: string; items: IconName[] }[] = [
   {
     label: "Languages",
-    items: ["Python", "JavaScript", "HTML5", "CSS3", "Java", "C++", "C", "C#"],
+    items: ["Python", "JavaScript", "HTML5", "CSS3"],
   },
   {
     label: "Frameworks",
-    items: [
-      "React",
-      "Node.js",
-      "Express",
-      "Next.js",
-      "Spring Boot",
-      ".NET",
-      "Flask",
-      "JavaFX",
-      "SFML",
-    ],
+    items: ["React", "Node.js", "Express", "Next.js", "Django", "Flask", "SFML"],
   },
   {
     label: "Databases",
